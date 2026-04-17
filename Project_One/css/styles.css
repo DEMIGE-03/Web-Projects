@@ -1,0 +1,363 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+        }
+
+        /* ---------- HEADER: DARK BLUE BACKGROUND ---------- */
+        header {
+            background-color: #0a2f6c;      /* dark blue */
+            width: 100%;
+        }
+
+        /* top area with logos and title */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background-color: #0a2f6c;      /* dark blue */
+        }
+
+        .udsm-logo, .ucc-logo {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .header-content {
+            text-align: center;
+            flex: 1;
+        }
+
+        .header-content h1 {
+            font-size: 1.7rem;
+            letter-spacing: 1px;
+            color: white;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .tagline {
+            color: rgb(239, 185, 85);
+            font-style: italic;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* hide the horizontal rule inside header to keep nav flush with image */
+        header > hr {
+            display: none;
+        }
+
+        /* ---------- NAVIGATION BAR: PALE BLUE, ENDS JUST BEFORE IMAGE ---------- */
+        .navbar {
+            background-color: #2a8bec;      /* pale blue */
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .hamburger {
+            font-size: 1.8rem;
+            cursor: pointer;
+            display: none;
+            color: #0a2f6c;
+            user-select: none;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0.8rem 0;
+            transition: all 0.2s ease;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            color: white;
+            transition: 0.2s;
+            letter-spacing: 0.3px;
+            display: inline-block;
+        }
+
+        .nav-menu li a:hover {
+            color: #f8c35a;
+            /*border-bottom: 2px solid #0a2f6c;*/
+        }
+        .nav-menu li a.active {
+            color: white;
+            text-decoration: none;
+            /*border-bottom: 2px solid #0a2f6c;*/
+        }
+
+        /* ----- image section: directly after nav, no gaps ----- */
+        .section {
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        #home img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-width: 100%;
+        }
+
+        /* ---------- FOOTER: SAME DARK BLUE AS HEADER ---------- */
+        footer {
+            background-color: #0a2f6c;      /* matching dark blue */
+            color: #f0f4fa;
+            margin-top: 0;
+            width: 100%;
+            padding-top: 2rem;
+        }
+
+        /* container with boxes: horizontal on large screen, vertical on medium/small */
+        footer .container {
+            display: flex;
+            flex-direction: row;          /* horizontal by default (large screens) */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem 2rem 2rem;
+        }
+
+        footer .box {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        footer .box img {
+            max-width: 80px;
+            background: rgb(245, 245, 246);
+            border-radius: 12px;
+            padding: 0.3rem;
+            margin-bottom: 1rem;
+            background-color: #0a2f6c;
+        }
+
+        footer .box p {
+            margin: 0.8rem 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #f4f5f7;
+        }
+
+        footer .box h3, 
+        footer .box h2, 
+        footer .box h4 {
+            color: rgb(248, 246, 246);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        footer .box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        footer .box ul li {
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        footer .box ul li a {
+            color: #f2f5f8;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        footer .box ul li a:hover {
+            color: rgb(245, 243, 243);
+            text-decoration: underline;
+        }
+
+        footer .box i {
+            width: 1.6rem;
+            color: #f8f9f6;
+            font-size: 1rem;
+        }
+
+        footer hr {
+            margin: 0 2rem 1rem 2rem;
+            border: 0;
+            height: 1px;
+            background: #2e4c7a;
+        }
+
+        footer > p {
+            text-align: center;
+            padding: 1rem 1rem 2rem 1rem;
+            font-size: 0.85rem;
+            color: #ccdeff;
+        }
+
+        footer > p a {
+            color: #f7faf8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+
+        /* ----- RESPONSIVE: medium & small screens (vertical footer, mobile nav) ----- */
+        @media screen and (max-width: 992px) {
+            .header {
+                padding: 1rem;
+            }
+            .header-content h1 {
+                font-size: 1.3rem;
+            }
+            .udsm-logo, .ucc-logo {
+                height: 60px;
+            }
+        }
+
+        /* tablet and mobile: footer container becomes VERTICAL */
+        @media screen and (max-width: 768px) {
+            footer .container {
+                flex-direction: column;    /* vertical alignment on medium & small screens */
+                align-items: center;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            footer .box {
+                width: 100%;
+                text-align: center;
+            }
+
+            footer .box ul li {
+                justify-content: center;
+            }
+
+            /* navigation: hamburger visible, menu collapses */
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #cfe7ff;
+                padding: 1rem 0;
+                gap: 0.8rem;
+                text-align: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 200;
+                box-shadow: 0 12px 18px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                padding: 0.5rem 1rem;
+            }
+
+            .nav-menu li a {
+                display: block;
+                padding: 0.5rem;
+            }
+        }
+
+        /* large screen ensures nav-menu always horizontal, hamburger hidden */
+        @media screen and (min-width: 769px) {
+            .nav-menu {
+                display: flex !important;
+                flex-direction: row;
+                position: static;
+                justify-content:center;
+                background: transparent;
+                box-shadow: none;
+                padding: 0.8rem 0;
+            }
+            .hamburger {
+                display: none !important;
+            }
+        }
+
+        /* extra small devices: fine tuning spacing */
+        @media screen and (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-content h1 {
+                font-size: 1.1rem;
+            }
+            .tagline {
+                font-size: 0.8rem;
+            }
+            .nav-container {
+                padding: 0 1rem;
+            }
+            footer .container {
+                padding: 0 1rem 1.5rem 1rem;
+            }
+        }
+
+        /* To ensure full width coverage & remove any unintended whitespace */
+        body, header, footer, .section, .navbar {
+            width: 100%;
+        }
+
+        /* remove default list decoration */
+        ul, li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
